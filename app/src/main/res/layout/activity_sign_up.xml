@@ -17,10 +17,22 @@
         android:textStyle="bold"
         />
     <EditText
-        android:id="@+id/fullname"
+        android:id="@+id/fname"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:text="Full Name"
+        android:hint="First Name"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/white" />
+    <EditText
+        android:id="@+id/lname"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="Last Name"
         android:layout_marginTop="10dp"
         android:textSize="16sp"
         />
@@ -32,7 +44,7 @@
         android:id="@+id/email"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:text="Email Id"
+        android:hint="Email Id"
         android:layout_marginTop="10dp"
         android:textSize="16sp"
         />
@@ -44,40 +56,48 @@
         android:id="@+id/mobile"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:text="Mobile Number"
+        android:hint="eg:123456789"
         android:layout_marginTop="10dp"
         android:textSize="16sp"
         />
+    <TextView
+        android:id="@+id/select"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Select Gender"/>
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select"
+        android:layout_centerHorizontal="true"
+
+        android:orientation="horizontal"
+        />
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Male" />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup1"
+        android:layout_below="@+id/radioGroup1"
+        android:text="Female" />
+
     <View
         android:layout_width="fill_parent"
         android:layout_height="1px"
         android:background="@color/white" />
-    <EditText
-        android:id="@+id/password"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:text="Password"
-        android:layout_marginTop="10dp"
-        android:textSize="16sp"
-        />
-    <EditText
-        android:id="@+id/confirmpassword"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:text="Confirm password"
-        android:layout_marginTop="10dp"
-        android:textSize="16sp"
-        />
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:background="@color/white" />
+
     <Button
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Sign Up"
+        android:text="Next"
         android:textSize="16sp"
         android:id="@+id/button"
         />

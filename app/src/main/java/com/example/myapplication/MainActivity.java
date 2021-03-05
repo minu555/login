@@ -27,38 +27,34 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (user.getText().toString().equals("admin") && passwd.getText().toString().equals("admin")) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(
-                            MainActivity.this
-                    );
-                    builder.setIcon(R.drawable.ic_check);
-                    builder.setTitle("Login Successfull");
-                    builder.setMessage("Welcome to my application");
-                    builder.setNegativeButton("YES", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    });
-                    AlertDialog alertDialog = builder.create();
-                    alertDialog.show();
-                } else {
-                    Toast.makeText(getApplicationContext(),
-                            "invalid login credentials", Toast.LENGTH_SHORT).show();
+
+                if(user.getText().toString().equals("admin")&&passwd.getText().toString().equals("admin")){
+                    startActivity (new Intent(MainActivity.this,success.class));
+
+
                 }
-            }
 
 
+
+
+        }
         });
-        button1.setOnClickListener(new View.OnClickListener() {
+        button1.setOnClickListener (new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(MainActivity.this, SignUp.class));
+
+
+
+                            startActivity(new Intent(MainActivity.this, SignUp.class));
+
+
+
+
+
+
 
 
             }
-
-        });
-    }
+        });}
 }
