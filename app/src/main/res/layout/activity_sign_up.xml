@@ -20,7 +20,7 @@
         android:id="@+id/fname"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:hint="First Name"
+        android:hint="Name"
         android:layout_marginTop="10dp"
         android:textSize="16sp"
         />
@@ -28,14 +28,7 @@
         android:layout_width="fill_parent"
         android:layout_height="1px"
         android:background="@color/white" />
-    <EditText
-        android:id="@+id/lname"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:hint="Last Name"
-        android:layout_marginTop="10dp"
-        android:textSize="16sp"
-        />
+
     <View
         android:layout_width="fill_parent"
         android:layout_height="1px"
@@ -56,7 +49,7 @@
         android:id="@+id/mobile"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:hint="eg:123456789"
+        android:hint="mobie num"
         android:layout_marginTop="10dp"
         android:textSize="16sp"
         />
@@ -86,18 +79,39 @@
         android:layout_alignLeft="@+id/radioGroup1"
         android:layout_below="@+id/radioGroup1"
         android:text="Female" />
-
-    <View
+    <TextView
+        android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:background="@color/white" />
+        android:layout_gravity="center"
+        android:text="select your DOB"/>
+
+    <DatePicker
+        android:id="@+id/datepicker"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:spinnersShown="true"/>
+    <EditText
+        android:id="@+id/password"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        />
+
+
+   
 
     <Button
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Next"
+        android:text="SignUp"
         android:textSize="16sp"
         android:id="@+id/button"
         />

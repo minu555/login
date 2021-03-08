@@ -6,34 +6,62 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
-    EditText fullname,email,mobile,password,confirmpassword,lastname;
+    EditText fullname,email,mobile,password;
     Button button;
+    DatePicker datePicker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         fullname=findViewById(R.id.fname);
-        lastname=findViewById(R.id.lname);
+
         email=findViewById(R.id.email);
         mobile=findViewById(R.id.mobile);
         password=findViewById(R.id.password);
+        datePicker=findViewById(R.id.datepicker);
 
-        confirmpassword=findViewById(R.id.confirmpassword);
+
         button=findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        if(fullname.length()==0)
+                        {
+                            fullname.requestFocus();
+                            fullname.setError("FIELD CANNOT BE EMPTY");
+                        }
 
-                        startActivity(new Intent(SignUp.this, SignUp1.class));
 
+                        else if(email.length()==0)
+                        {
+                            email.requestFocus();
+                            email.setError("FIELD CANNOT BE EMPTY");
 
+                        }
+                        else if(mobile.length()==0)
+                        {
+                            mobile.requestFocus();
+                            mobile.setError("FIELD CANNOT BE EMPTY");
+                        }
+                        else if(password.length()==0)
+                        {
+                            password.requestFocus();
+                            password.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else
+                        {
+                            startActivity(new Intent(SignUp.this, MainActivity.class));
+                        }
                     }
+        });
 
-                });
+
 
 
 
